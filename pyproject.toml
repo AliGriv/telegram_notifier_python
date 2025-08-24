@@ -1,5 +1,5 @@
 [build-system]
-requires = ["hatchling"]
+requires = ["hatchling", "hatch-requirements-txt"]
 build-backend = "hatchling.build"
 
 [project]
@@ -7,30 +7,27 @@ name = "telegram-notifier"
 description = "Simple Telegram notification client for Python"
 readme = "README.md"
 requires-python = ">=3.9"
-dynamic = ["version"]
-dependencies = [
-    "requests>=2.25.0",
-]
-authors = [
-    {name = "AliGriv"},
-]
+dynamic = ["version", "dependencies"]
+authors = [{ name = "AliGriv" }]
 keywords = ["telegram", "notifications", "bot", "messaging"]
 classifiers = [
-    "Development Status :: 4 - Beta",
-    "Intended Audience :: Developers",
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
-    "Topic :: Communications",
-    "Topic :: Software Development :: Libraries :: Python Modules",
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Communications",
+  "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 
 [project.urls]
 Homepage = "https://github.com/AliGriv/telegram_notifier_python"
 Repository = "https://github.com/AliGriv/telegram_notifier_python"
 
-
 [tool.hatch.version]
 path = "telegram_notifier/__init__.py"
+
+[tool.hatch.metadata.hooks.requirements_txt]
+files = ["requirements.txt"]
