@@ -2,6 +2,8 @@
 
 A simple Python library for sending notifications through Telegram bots.
 
+**Dislaimer**: Not fully tested :D
+
 ## ✨ Features
 
 - 📤 Send text messages with formatting (Markdown/HTML)
